@@ -1,5 +1,6 @@
 * {
-    ---
+    --temp-example-here: red;
+    /* var(--temp-example-here) */
 }
 
 .dash_menu {
@@ -11,6 +12,50 @@
     max-width: 15px;
 }
 
-.user_name{
-    font-size: 
+.container {
+
+}
+
+.side_bar {
+
+}
+
+.dash_menu {
+
+}
+
+.dash_submenu {
+
+}
+
+.secondary_container {
+
+}
+
+.secondary_container.nav {
+
+}
+
+.header_greeting{
+
+}
+
+.main_content{
+
+}
+
+.projects{
+
+}
+
+.card{
+
+}
+
+.announcements{
+
+}
+
+.trending {
+    
 }
