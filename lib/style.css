@@ -1,5 +1,8 @@
 * {
     --temp-example-here: red;
+    --color-sidebar-bg: #16a34a;
+    --color-maincontent-bg: lightgrey;
+    --color-card-bg: white;
     /* var(--temp-example-here) */
 }
 
@@ -13,13 +16,19 @@
 }
 
 .container {
-
+    display: grid;
+    grid-template-columns: 1fr 4fr;
 }
 
 .side_bar {
+    background-color: var(--color-sidebar-bg);
+    grid-column: 1;
+    display: grid;
+    
+}
+.side_bar.header {
 
 }
-
 .dash_menu {
 
 }
@@ -29,27 +38,63 @@
 }
 
 .secondary_container {
-
+    grid-column: 2;
+    display: grid;
+    grid-template-rows: 1fr 5fr;
 }
 
-.secondary_container.nav {
+.nav {
+    grid-row: 1;
+    display: grid;
+    align-items: center;
+    grid-template-rows: 1fr 2fr;
+    box-shadow: 0px 4px 2px -2px rgba(0,0,0,0.3);
+    z-index: 10;
+}
 
+.search_bar {
+    grid-row: 1;
 }
 
 .header_greeting{
+    grid-row: 2;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: 1fr;
+    
+}
+.greeting_text{
+    grid-column: 1;
+}
+.header_greeting_icon{
+}
 
+.greeting {
+}
+
+.greeting_buttons{
+    grid-column: 2;
 }
 
 .main_content{
-
+    grid-row: 2;
+    background-color: var(--color-maincontent-bg);
+    padding: 10px;
 }
 
 .projects{
-
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
 }
 
 .card{
-
+    background-color: var(--color-card-bg);
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.3);
+    padding: 5px;
+    border-radius: 5px;
 }
 
 .announcements{
@@ -57,5 +102,5 @@
 }
 
 .trending {
-    
+
 }
