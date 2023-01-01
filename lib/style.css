@@ -5,6 +5,8 @@
     --color-maincontent-bg: #475569;
     --color-card-bg: #1e293b;
     --color-search-bg: #1e293b;
+    --color-button-bg: #0369a1;
+    --color-button-transform-bg: #0284c7;
     --font-size-main-side: .8rem;
     /* var(--temp-example-here) */
 
@@ -72,15 +74,17 @@
     display: grid;
     grid-template-rows: 1fr 5fr;
 }
-
+    /* HEADER */
 .nav {
     background-color: var(--color-maincontent-bg);
     grid-row: 1;
     display: grid;
     align-items: center;
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: 1fr 1.5fr;
     box-shadow: 0px 4px 2px -2px rgba(0,0,0,0.3);
     z-index: 10;
+    padding-left: 10px;
+    padding-right: 20px;
 }
 
 .top_nav{
@@ -124,25 +128,56 @@
     border-radius: 50%;
     margin: 0px 20px;
 }
+
 .header_greeting{
     grid-row: 2;
     display: grid;
+    grid-template-columns: 4fr 1fr;
     align-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-template-rows: 1fr;
-    
+}
+
+.header_greeting .user_profile{
+    width: 70px;
+    height: 70px;
 }
 .greeting_text{
     grid-column: 1;
-}
-.header_greeting_icon{
-}
-
-.greeting {
+    display: flex;
+    align-items: center;
+    margin: 0 10px 0 10px;
 }
 
+.greeting_text p {
+    margin-bottom: 3px;
+}
+.greeting{
+    font-size: 1.3rem;
+    margin: 0;
+}
 .greeting_buttons{
     grid-column: 2;
+    display: flex;
+    gap: 20px;
+}
+
+.greeting_buttons button {
+    border-radius: 20px;
+    background-color: var(--color-button-bg);
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: 10px 20px;
+    width: 95px;
+    text-align: center;
+    transition: transform 0.1s ease-in;
+
+}
+
+.greeting_buttons button:hover {
+    cursor: pointer;
+    transform: scale(0.98);
+    background-color: var(--color-button-transform-bg);
+
 }
 
 
