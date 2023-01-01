@@ -85,8 +85,23 @@
 
 .search_bar {
     grid-row: 1;
-    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.search_input {
+    border-radius: 10px;
+    border: none;
+    font-size: 1.1rem;
+    margin: 10px;
+    padding: 5px;
+    width: 75%;
     background-color: var(--color-search-bg);
+}
+
+.search_input:focus{
+    outline: none;
 }
 
 .header_greeting{
