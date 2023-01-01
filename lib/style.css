@@ -1,9 +1,10 @@
 * {
+    color: white;
     --temp-example-here: red;
-    --color-sidebar-bg: #16a34a;
-    --color-maincontent-bg: lightgrey;
-    --color-card-bg: white;
-    --color-search-bg: lightgrey;
+    --color-sidebar-bg: #1e293b;
+    --color-maincontent-bg: #475569;
+    --color-card-bg: #1e293b;
+    --color-search-bg: #1e293b;
     --font-size-main-side: .8rem;
     /* var(--temp-example-here) */
 
@@ -73,6 +74,7 @@
 }
 
 .nav {
+    background-color: var(--color-maincontent-bg);
     grid-row: 1;
     display: grid;
     align-items: center;
