@@ -3,8 +3,10 @@
     --color-sidebar-bg: #16a34a;
     --color-maincontent-bg: lightgrey;
     --color-card-bg: white;
+    --color-search-bg: lightgrey;
     --font-size-main-side: .8rem;
     /* var(--temp-example-here) */
+
 }
 
 .icon {
@@ -17,27 +19,52 @@
     grid-template-columns: 1fr 4fr;
 }
 
+/* DASHBOARD */
+
 .side_bar {
     background-color: var(--color-sidebar-bg);
     grid-column: 1;
     display: grid;
-    
+    grid-template-rows: 0.2fr 0.5fr 0.3fr; 
+    padding: 10px;
 }
-.side_bar.header {
 
+.side_bar i {
+    font-size: 1rem;
+    padding-right: 8px;
+}
+.dashboard{
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 20px 20px;
+}
+
+.dashboard>h1{
+    margin: 0px;
 }
 
 .dash_menu {
+    grid-row: 2;
     list-style: none;
     padding-right: 10px;
     padding: 0px;
 }
 
+.menu_item{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 20px;
+}
 .dash_submenu {
+    grid-row: 3;
     list-style: none;
     padding-right: 10px;
     padding: 0px;
 }
+
+/* RIGHT CONTENT */
 
 .secondary_container {
     grid-column: 2;
@@ -56,6 +83,8 @@
 
 .search_bar {
     grid-row: 1;
+    border-radius: 3px;
+    background-color: var(--color-search-bg);
 }
 
 .header_greeting{
@@ -79,6 +108,8 @@
     grid-column: 2;
 }
 
+
+/* PROJECTS, ANNOUNCEMENTS, TRENDING */
 .main_content{
     grid-row: 2;
     background-color: var(--color-maincontent-bg);
@@ -118,4 +149,15 @@
 }
 .trending {
 
+}
+
+/* LINKS */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    border-bottom: 2px solid white;
 }
