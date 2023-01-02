@@ -6,7 +6,9 @@
     --color-card-bg: #1e293b;
     --color-search-bg: #1e293b;
     --color-button-bg: #0369a1;
+    --color-card-edge: #0369a1;
     --color-button-transform-bg: #0284c7;
+    --color-card-header-bg: #0f172a;
     --font-size-main-side: .8rem;
     /* var(--temp-example-here) */
 
@@ -28,7 +30,7 @@
     background-color: var(--color-sidebar-bg);
     grid-column: 1;
     display: grid;
-    grid-template-rows: 0.2fr 0.5fr 0.3fr; 
+    grid-template-rows: 0.1fr 0.3fr 0.2fr; 
     padding: 10px;
 }
 
@@ -192,6 +194,12 @@
     padding: 10px;
 }
 
+.main_content header {
+    font-size: 1.2rem;
+    font-weight:bold;
+    padding-bottom: 10px;
+    border-bottom: solid var(--color-card-header-bg) 0.1px;
+}
 .projects{
     grid-column: 1;
     display: grid;
@@ -204,25 +212,74 @@
     box-shadow: 0px 3px 15px rgba(0,0,0,0.3);
     padding: 5px;
     border-radius: 5px;
+    border-left: solid 5px;
+    border-left-color: var(--color-card-edge)
 }
 
 .main_content_side {
     grid-column: 2;
     display: grid;
+    gap: 15px;
+    grid-template-rows: 1fr 1fr;
 }
 .announcements{
+    grid-row: 1;
+    border-radius: 5px;
     padding: 5px;
     font-size: var(--font-size-main-side);
     background-color: var(--color-card-bg);
     box-shadow: 0px 3px 15px rgba(0,0,0,0.3);
 }
-.announcements>header{
-    font-weight: 2;
-}
+
 .trending {
-
+    grid-row: 2;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: var(--font-size-main-side);
+    background-color: var(--color-card-bg);
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.3);
+    display: grid;
+    grid-template-rows: repeat(4, .2fr);
 }
 
+.trending_users {
+    display: flex;
+    align-items: center;
+}
+.trending_users .trending_name p{
+    margin: 0 10px 0 10px;
+}
+.trending_user_profile {
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0px 10px;
+}
+
+.trending .one {
+    background: url(images/pic2.jpg) no-repeat center;
+}
+
+.trending .two {
+    background: url(images/pic3.jpg) no-repeat center;
+}
+
+.trending .three {
+    background: url(images/pic4.jpg) no-repeat center;
+}
+
+.trending .four {
+    background: url(images/pic5.jpg) no-repeat center;
+}
+/* .user_profile {
+    background: url(images/pic1.jpg) no-repeat center;
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0px 20px;
+} */
 /* LINKS */
 
 a {
